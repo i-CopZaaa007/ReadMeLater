@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ReadMeLater</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>ReadMeLater</h1>
+
+  <form id="add-form">
+    <input type="text" id="title" placeholder="Topic" required />
+    <input type="url" id="url" placeholder="Link" required />
+    <input type="text" id="tags" placeholder="Category" />
+    <textarea id="note" placeholder="Description"></textarea>
+    <button type="submit">Add</button>
+  </form>
+
+  <hr>
+  <div id="link-list"></div>
+
+  <script src="script.js"></script>
+  <script>
+    // ดัก Ctrl+Scroll
+window.addEventListener('wheel', function(e) {
+  if (e.ctrlKey) {
+    e.preventDefault();
+  }
+}, { passive: false });
+
+// ดัก Ctrl + +/- กดคีย์
+window.addEventListener('keydown', function(e) {
+  if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=')) {
+    e.preventDefault();
+  }
+});
+
+  </script>
+</body>
+</html>
